@@ -14,7 +14,10 @@ h1{
     margin-bottom: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 50px;
-    color: rgb(255, 0, 0);
+    color: rgb(45, 206, 255);
+    text-shadow: 3px 3px 0 #000;
+    background-image: url(9919.png);
+    background-size: 60px;
 }
 .form{
     display: flex;
@@ -36,7 +39,8 @@ h1{
 }
 .form button{
     border: none;
-    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
     margin-top: 16px;
     padding: 8px;
     font-size: 20px;
@@ -52,9 +56,7 @@ h1{
     border-radius: 4px;
     padding: 8px;
     justify-content: space-around;
-    display:grid;
-
-    
+    display:grid;    
 
 }
 .bio{
@@ -63,6 +65,26 @@ h1{
     background-color: rgb(189, 228, 156);
     border: 1px solid rgb(19, 19, 19);
     border-radius: 4px;
+    padding: 8px;
+    justify-content: center;
+    text-align: center;
+}
+.repo{
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(175, 156, 228);
+    border: 2px solid rgb(19, 19, 19);
+    border-radius: 6px;
+    padding: 8px;
+    justify-content: center;
+    text-align: center;
+}
+.repo1{
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(175, 156, 228);
+    border: 2px solid rgb(19, 19, 19);
+    border-radius: 6px;
     padding: 8px;
     justify-content: center;
     text-align: center;
