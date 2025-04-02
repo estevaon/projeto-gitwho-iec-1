@@ -8,12 +8,12 @@ const infosFn = async(nome) =>{
         ctx.classList.add('ctx')
         ctx = ` 
                 <div class ="login">
-                    <img src = "${data.avatar_url}" style="width: 90px; height: auto;">
+                    <img src = "${data.avatar_url}" style="width: 130px; height: auto;">
                     <h2>${data.name}</h2>
                     <p>login: ${data.login}</p>
                 </div>
                 <div class = "bio">
-                    <p>Bio: ${data.bio}</p>
+                    <p> ${data.bio ? `bio: ${data.bio}` : 'usuário não escreveu a biografia'} </p>
                     <p>seguidores: ${data.followers} |
                     Seguindo: ${data.following}</p>
                     <p> repositório publico: ${data.public_repos}</p>
@@ -35,13 +35,16 @@ const reposFn = async(nome) => {
             ctx += ` 
                 <div class ="repo">
                     <h2>${repo.name}</h2>
+                    <hr>
                 </div>
                 <div class = "repo1">
-                    <p>Descrição: ${repo.description}</p>
-                    <p>linguagem: ${repo.language} |
-                    Forks: ${repo.forks}</p>
-                    <p> Criado em:  ${repo.created_at}</p>
+                    <p>${repo.description ? `descrição: ${repo.description}` : 'sem descrição'} </p>
+                    <p>linguagem: ${repo.language}</p>
+                    <p>Quantos forks: ${repo.forks}</p>
+                    <p>${repo.allow_forking ? 'Permite fork' : 'Não permite fork'}</p>
+                    <p> Criado em:  ${new Date(repo.created_at).toLocaleDateString('pt-BR')}</p>
                     <p> Branch: ${repo.default_branch} </p>
+                    <p> ${repo.visibility === 'public' ? 'publico' : 'privado' }</p>
                 </div>
             `
             document.querySelector('.repos').innerHTML = ctx
